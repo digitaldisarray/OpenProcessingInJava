@@ -9,7 +9,7 @@ public class Main {
 	public static final int HEIGHT = 1000;
 	
 	public static void main(String args[]) {
-		LoopsTwo drawing = new LoopsTwo();
+		SpiralPulse drawing = new SpiralPulse();
 		PApplet.runSketch(new String[] { "" }, drawing);
 		PSurfaceAWT surf = (PSurfaceAWT) drawing.getSurface();
 		PSurfaceAWT.SmoothCanvas canvas = (PSurfaceAWT.SmoothCanvas) surf.getNative();

@@ -3,6 +3,15 @@ import java.util.ArrayList;
 
 import processing.core.PApplet;
 
+/*
+ * Original code from user skizzm on openprocessing.org
+ * 
+ * https://www.openprocessing.org/sketch/773515
+ * 
+ */
+
+// Code is not currently working
+
 public class LoopsTwo extends PApplet {
 
 	OpenSimplexNoise noise;
@@ -36,29 +45,24 @@ public class LoopsTwo extends PApplet {
 			if (in_color)
 				col = new Color(i, 70, 100, 100);
 
-			stroke(col.getRGB());
-//			Vector[] verts = new Vector[c];
-			ArrayList<Vector> verts = new ArrayList<>();
+			Vector[] verts = new Vector[c];
 			for (int r = 0; r < c; r++) {
 				a = r / c * TWO_PI;
 				x = (float) (noise.eval(cos(a) * ns, sin(a) * ns, 1.5 + frameCount * ts, i * 0.01) * size);
 				y = (float) (noise.eval(cos(a) * ns, sin(a) * ns, 2.5 + frameCount * ts, i * 0.01) * size);
 
-//				verts[r] = new Vector(x, y);
-				verts.add(new Vector(x, y));
+				verts[r] = new Vector(x, y);
 			}
 
 			beginShape();
 			for (int r = 0; r < c; r++) {
-//				vertex(-verts[r].x, verts[r].y);
-				vertex(-verts.get(r).x, verts.get(r).y);
+				vertex(-verts[r].x, verts[r].y);
 			}
 			endShape(CLOSE);
 
 			beginShape();
 			for (int r = 0; r < c; r++) {
-//				vertex(verts[r].x, verts[r].y);
-				vertex(verts.get(r).x, verts.get(r).y);
+				vertex(verts[r].x, verts[r].y);
 			}
 			endShape(CLOSE);
 		}
