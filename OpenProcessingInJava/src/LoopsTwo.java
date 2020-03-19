@@ -1,5 +1,4 @@
 import java.awt.Color;
-import java.util.ArrayList;
 
 import processing.core.PApplet;
 
@@ -44,6 +43,8 @@ public class LoopsTwo extends PApplet {
 		for (int i = 0; i < c; i++) {
 			if (in_color)
 				col = new Color(i, 70, 100, 100);
+			
+			stroke(col.getRGB());
 
 			Vector[] verts = new Vector[c];
 			for (int r = 0; r < c; r++) {
