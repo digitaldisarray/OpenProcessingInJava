@@ -17,7 +17,7 @@ public class SpiralPulse extends PApplet {
 	public void setup() {
 		colorMode(PConstants.HSB, 1);
 		a = 0;
-		h = 1;
+		h = 0;
 		d = 1000;
 	}
 

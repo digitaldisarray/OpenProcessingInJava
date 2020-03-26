@@ -5,11 +5,11 @@ import processing.core.PApplet;
 
 public class Main {
 
-	public static final int WIDTH = 1200;
+	public static final int WIDTH = 1000;
 	public static final int HEIGHT = 1000;
 
 	public static void main(String args[]) {
-		GeometricAnimations161016 drawing = new GeometricAnimations161016();
+		SpiralPulse drawing = new SpiralPulse();
 		PApplet.runSketch(new String[] { "" }, drawing);
 		PSurfaceAWT surf = (PSurfaceAWT) drawing.getSurface();
 		PSurfaceAWT.SmoothCanvas canvas = (PSurfaceAWT.SmoothCanvas) surf.getNative();
